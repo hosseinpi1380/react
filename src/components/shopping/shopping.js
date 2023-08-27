@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 export default class Cart extends Component {
     constructor(props) {
         super(props);
@@ -21,4 +20,4 @@ export default class Cart extends Component {
             </div>
         )
     }
-}
+};
