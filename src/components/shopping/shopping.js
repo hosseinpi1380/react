@@ -13,10 +13,9 @@ export default class Cart extends Component {
                 <div className='flex flex-row justify-around py-4 px-2'>
                     <h1>{this.props.name}</h1>
                     <h2>{this.props.price}</h2>
-                    <button className='bg-red-600 text-white py-2 px-4 rounded-full' onClick={this.clickBtn.bind(this, this.props)}>
+                    <button className='bg-blue-600 text-white py-2 px-4 rounded-full' onClick={this.clickBtn.bind(this, this.props)}>
                         Add to Cart</button>
                 </div>
-                
             </div>
         )
     }
