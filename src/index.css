@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+    .btn.Applied{
+        @apply bg-[#3bb077] text-[#fff0f1] rounded-full;
+    }
+    .btn.Decline{
+        @apply bg-[#d95087] text-[#fff0f1] rounded-full;
+    }
+    .btn.Pending{
+        @apply bg-[#2a7ade];
+    }
+}
