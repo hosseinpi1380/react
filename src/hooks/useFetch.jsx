@@ -6,7 +6,7 @@ const useFetch = () => {
             fetch('http://localhost:4001/data')
                 .then(res => res.json())
                 .then(data => setData(data));
-        }, 1000);
+        }, 3000);
     }, [])
     return [data]
 }

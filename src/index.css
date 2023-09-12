@@ -15,11 +15,17 @@
     nav{
         @apply bg-slate-800 text-white py-5 px-2 uppercase;
     }
-    input[type='input']{
-        @apply px-2 py-3 my-4 outline-none bg-slate-400 text-black rounded-md shadow-md;
+    input{
+        @apply px-2  py-3 my-4 active:outline-none  bg-slate-400 text-black rounded-md shadow-md focus-visible:outline-none outline-none;
     }
     input::placeholder{
         @apply text-gray-200; 
+    }
+    input[type='submit']{
+        @apply bg-slate-50 shadow-lg hover:shadow-md duration-150;
+    }
+    form{
+        @apply px-4 rounded-md shadow-md;
     }
     button.add{
         @apply bg-blue-700 p-4 rounded-lg shadow-md text-white;
@@ -30,7 +36,6 @@
     option,select{
         @apply py-2 px-1;
     }
-    
 }
 @layer utilities{
     .reserve{

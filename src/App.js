@@ -1,16 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import './index.css'
-import useFetch from './hooks/useFetch';
-import useCounter from './hooks/useCounter'
-export default function App() {
-  
-  const [count,addCount,minCount]=useCounter(0);
+import React, { useState } from 'react'
+import './index.css';
 
+import useInput from './hooks/useInput';
+export default function App() {
+  const [firstname,FirstBinding,firstReset]=useInput(null)
+  const [lastname,LastBinding,lastReset]=useInput(null)
+  
+  const submitHadler=(event)=>{
+    event.preventDefault();
+    alert(`hello ${firstname}, ${lastname}`)
+    firstReset()
+    lastReset()
+  }
   return (
-    <>
-    {count}
-    <button className='add' onClick={addCount}>+</button>
-    <button className='min' onClick={minCount}>-</button>
-    </>
+    <form 
+    onSubmit={e=>submitHadler(e)} 
+    className='flex flex-col bg-slate-200'>
+      <input type="text" placeholder='firstname' 
+       {...FirstBinding}/>
+      <input type="password" placeholder='password'
+      {...LastBinding} 
+      />
+      <input type="submit" />
+    </form>
   )
 }
