@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer utilities{
-    .cold{
-        @apply bg-blue-700
-    }
-    .hot{
-        @apply bg-red-700
-    }
     .center{
         @apply flex h-screen justify-center items-center; 
     }
@@ -27,8 +21,11 @@
     input::placeholder{
         @apply text-gray-200; 
     }
-    button{
-        @apply hover:bg-red-700
+    button.add{
+        @apply bg-blue-700 p-4 rounded-lg shadow-md text-white;
+    }
+    button.min{
+        @apply bg-red-700 p-4 rounded-lg shadow-md text-white;
     }
     option,select{
         @apply py-2 px-1;
