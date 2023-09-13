@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve-json":"json-server --watch products.json -p 4001"
+    "serve-json":"json-server --watch products.json -p 4001",
+    "server-json-1":"json-server --watch countries.json -p 3008"
   },
   "eslintConfig": {
     "extends": [
