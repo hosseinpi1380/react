@@ -1,19 +1,17 @@
-import React, { useEffect, useMemo, useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import './index.css';
-
-export let isday = false;
+import FilterNotes from './FilterNote';
 export default function App() {
   const [notes, setNotes] = useState([]);
   const [newNotes, setNewNotes] = useState('')
-  const [theme,setTheme]=useState('light');
-  useEffect(()=>{
-    if(theme==='dark'){
+  const [theme, setTheme] = useState('light');
+  useEffect(() => {
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark')
-    }else{
+    } else {
       document.documentElement.classList.remove('dark')
     }
-  },[theme])
+  }, [theme])
   const addHandler = () => {
     let obj = {
       id: notes.length + 1,
@@ -22,9 +20,10 @@ export default function App() {
     setNotes(prev => [...prev, obj])
     setNewNotes('')
   }
- const hadnleThemeSwith=()=>{
-  setTheme(theme==='dark'?'light':'dark')
- }
+  const hadnleThemeSwith = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <>
       <div className='shadow-lg p-4 dark:bg-slate-800 dark:text-white rounded-md max-sm:text-sm max-sm:font-normal max-sm:h-4/5'>
@@ -49,12 +48,9 @@ export default function App() {
         </ul>
         <hr />
         <h1 className='text-xl uppercase font-semibold'>js include notes</h1>
-        {useMemo(() =>
-          notes.filter(note => note.title.includes('js'))
-            .map(el => <div key={el.id}>{el.title}</div>)
-          , [notes])}
-        
       </div>
+      <FilterNotes notesArray={notes} />
     </>
   )
 }
+
