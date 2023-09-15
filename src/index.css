@@ -2,43 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .center{
-        @apply flex h-screen justify-center items-center; 
-    }
-}
-
-@layer base{
-    body{
+@layer base {
+    body {
         @apply flex h-screen justify-center items-center;
     }
-    nav{
+
+    nav {
         @apply bg-slate-800 text-white py-5 px-2 uppercase;
     }
-    input{
-        @apply px-2  py-3 my-4 active:outline-none  bg-slate-400 text-black rounded-md shadow-md focus-visible:outline-none outline-none;
+
+    input {
+        @apply px-2 py-3 my-4 active:outline-none bg-slate-400 text-black rounded-md shadow-md
+        outline-none focus-visible:outline-none;
     }
-    input::placeholder{
-        @apply text-gray-200; 
+
+    input::placeholder {
+        @apply text-gray-200;
     }
-    input[type='submit']{
+
+    input[type='submit'] {
         @apply bg-slate-50 shadow-lg hover:shadow-md duration-150;
     }
-    form{
+
+    form {
         @apply px-4 rounded-md shadow-md;
     }
-    button.add{
+    button{
+        @apply bg-slate-800 text-white p-2 rounded-md ml-3 hover:bg-slate-700;
+    }
+    button.add {
         @apply bg-blue-700 p-4 rounded-lg shadow-md text-white;
     }
-    button.min{
+
+    button.min {
         @apply bg-red-700 p-4 rounded-lg shadow-md text-white;
     }
-    option,select{
+
+    option,
+    select {
         @apply py-2 px-1;
     }
 }
-@layer utilities{
-    .reserve{
-        @apply bg-gray-400 px-2;
-    }
+
+@layer utilities {
+    
+
 }

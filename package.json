@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.2",
     "json-server": "^0.17.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -20,8 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve-json":"json-server --watch products.json -p 4001",
-    "server-json-1":"json-server --watch countries.json -p 3008"
+    "serve-json": "json-server --watch products.json -p 4001",
+    "server-json-1": "json-server --watch countries.json -p 3008"
   },
   "eslintConfig": {
     "extends": [
