@@ -1,20 +1,16 @@
-import React from 'react';
-import './index.css'
-
-import MainShopping from './components/shopping/mainShopping'
-export default class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <>
-      </>
-    )
-  }
+import React, { useState } from 'react'
+import User from './components/User'
+import UsernameContext from './context/Username'
+const App = () => {
+  const [username, setUsername] = useState('hossein');
+  return (
+    <UsernameContext.Provider value={username}>
+      <User />
+    </UsernameContext.Provider>
+  )
 }
 
-
+export default App
 
 
 
