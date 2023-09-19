@@ -34,7 +34,8 @@ const App = () => {
           <h1 className='text-center uppercase'>our menu</h1>
           <div className="container mt-10">
             {menuItems && <Button menu={menuItems} active={activeMenu} changeMenu={changeMenu}/>}
-            <div className="products grid grid-cols-2 mt-14 my-2 px-3">
+            <div className="products grid grid-cols-2 mt-14 my-2 px-3 max-sm:grid-cols-1
+             overflow-hidden max-sm:p-0 max-sm:m-0">
               {filtered && <Product filtered={filtered} />}
             </div>
           </div>
