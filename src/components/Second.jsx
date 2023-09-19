@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import UsernameContext from '../context/Username'
+import {UsernameContext} from '../context/Username'
 import Third from './Third'
 const Second = () => {
   const username = useContext(UsernameContext)
