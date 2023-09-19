@@ -1,18 +1,12 @@
-import React from 'react';
-import './index.css'
+import React from 'react'
 
-import MainShopping from './components/shopping/mainShopping'
-export default class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <>
-      </>
-    )
-  }
+const App = () => {
+  return (
+    <div>App</div>
+  )
 }
+
+export default App
 
 
 
