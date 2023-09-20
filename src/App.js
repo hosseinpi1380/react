@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
-import User from './components/User'
-import UsernameContextProvider from './context/Username'
+import React from 'react'
+import { SampleProvider } from './context/SampleContext';
+import Function from './components/Function';
+import Navbar from './components/Navbar';
+import './index.css'
+import router from './router/routes'
+import { useRoutes } from 'react-router-dom';
 const App = () => {
+  const routing = useRoutes(router)
   return (
     <>
-      <UsernameContextProvider>
-        <User />
-      </UsernameContextProvider>
+      <SampleProvider>
+        <Navbar />
+        <Function />
+      </SampleProvider>
+      {routing}
     </>
   )
 }
