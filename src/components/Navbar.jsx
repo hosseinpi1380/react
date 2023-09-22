@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { themeContext, changeThemeContext } from '../context/ThemeContext';
+import { themeContext } from '../context/ThemeContext'
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const theme = useContext(themeContext);
   const navRef = useRef();
-  
+
   const navbarHandler = () => {
     setOpen(prev => !prev)
     if (open) {
@@ -25,6 +25,7 @@ const Navbar = () => {
             <li className='px-2 cursor-pointer'><Link to='/about-us' >about us</Link></li>
             <li className='px-2 cursor-pointer'><Link to='/contact-us'>contact us</Link></li>
             <li className='px-2 cursor-pointer'><Link to='/shopping'>shopping</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/basket'>basket</Link></li>
           </ul>
           <div>
             <button onClick={theme.changeTheme}>
@@ -41,24 +42,25 @@ const Navbar = () => {
           </div>
         </nav>
       </header >
-      <div className='sm-size text-right py-4 pr-4 md:hidden max-sm:overflow-hidden'>
-        <button onClick={navbarHandler}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+      <div className='sm-size text-right py-4 pr-4 md:hidden overflow-hidden h-full z-10'>
+        <button onClick={navbarHandler} className='active:scale-95 active:duration-100'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-10 h-10">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
           </svg>
         </button>
         <div className=' absolute -right-full top-0 w-[40%] h-full z-10 bg-white transition-all duration-150' ref={navRef}>
-          <button onClick={navbarHandler} className='absolute left-4 top-4'>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+          <button onClick={navbarHandler} className='absolute left-4 top-4 active:scale-95 active:duration-100'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </button>
-          <ul className='flex flex-col py-5'>
-            <li className='px-2 cursor-pointer'><Link to='/'>Home</Link></li>
-            <li className='px-2 cursor-pointer'><Link to='/services' >services</Link></li>
-            <li className='px-2 cursor-pointer'><Link to='/about-us' >about us</Link></li>
-            <li className='px-2 cursor-pointer'><Link to='/contact-us'>contact us</Link></li>
-            <li className='px-2 cursor-pointer'><Link to='/shopping'>shopping</Link></li>
+          <ul className='flex flex-col py-5 text-lg uppercase mt-5'>
+            <li className='px-2 cursor-pointer my-3'><Link to='/'>Home</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/services' >services</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/about-us' >about us</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/contact-us'>contact us</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/shopping'>shopping</Link></li>
+            <li className='px-2 cursor-pointer my-3'><Link to='/basket'>basket</Link></li>
           </ul>
         </div>
       </div>
