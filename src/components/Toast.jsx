@@ -5,7 +5,7 @@ const Toast = () => {
     return (
         <>
             {toast.showToast && (
-                <div className='toast-container fixed bottom-0  right-2 text-end mb-4'>
+                <div className=' animate-pulse toast-container fixed bottom-0  right-2 text-end mb-4'>
                     <div className="toast items-center flex text-white bg-blue-500">
                         <div className="flex justify-center items-center p-2">
                             <button onClick={toast.closeToast}>
@@ -16,7 +16,6 @@ const Toast = () => {
                         </div>
                     </div>
                 </div>
-
             )}
         </>
     )
