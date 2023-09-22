@@ -1,19 +1,20 @@
-import React from 'react'
-import { SampleProvider } from './context/SampleContext';
-import Function from './components/Function';
-import Navbar from './components/Navbar';
+import React, { useContext, useEffect } from 'react'
 import './index.css'
+import Navbar from './components/Navbar';
 import router from './router/routes'
 import { useRoutes } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 const App = () => {
   const routing = useRoutes(router)
+  useEffect(() => {
+
+  })
   return (
     <>
-      <SampleProvider>
+      <ThemeProvider>
         <Navbar />
-        <Function />
-      </SampleProvider>
-      {routing}
+        {routing}
+      </ThemeProvider>
     </>
   )
 }
