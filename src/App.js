@@ -1,14 +1,21 @@
 import React from 'react'
-import Sidebar from './components/Sidebar'
-import { useRoutes } from 'react-router-dom'
-import route from './routes/route'
 import './index.css'
+import { useRoutes } from 'react-router-dom'
+import Sidebar from './components/Sidebar'
+import route from './routes/route'
+import Header from './components/Header'
+import { CmsProvider } from './context/CmsProvider'
 const App = () => {
-  const routes=useRoutes(route)
+  const routes = useRoutes(route)
   return (
     <>
-      <Sidebar/>
-      {routes}
+      <CmsProvider>
+        <Sidebar />
+        <div className='w-4/5'>
+          <Header />
+          {routes}
+        </div>
+      </CmsProvider>
     </>
   )
 }

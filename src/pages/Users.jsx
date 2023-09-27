@@ -1,8 +1,14 @@
 import React from 'react'
+import Error from '../components/Error'
 
 const Users = () => {
   return (
-    <div>Users</div>
+    <>
+      <div>
+        users
+      </div>
+      <Error msg='کاربری' />
+    </>
   )
 }
 

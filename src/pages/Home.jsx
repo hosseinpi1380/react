@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Error from '../components/Error'
+import DefaultCarousel from '../components/Carousel'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      
+      <Error msg='محصولی' />
+      
+    </div>
   )
 }
 

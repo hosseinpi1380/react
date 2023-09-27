@@ -3,7 +3,7 @@ import Products from '../pages/Products';
 import Comments from '../pages/Comments';
 import Users from '../pages/Users';
 import Orders from '../pages/Orders';
-import Discount from '../pages/Discout';
+import Discount from '../pages/Discount';
 const route = [
     { path: '/', element: <Home /> },
     { path: '/products', element: <Products /> },

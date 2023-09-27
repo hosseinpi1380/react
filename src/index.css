@@ -2,41 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .cold{
-        @apply bg-blue-700
+@layer components {
+    .side-list {
+        @apply text-xl my-3 font-sans font-medium;
     }
-    .hot{
-        @apply bg-red-700
+    .product-input{
+        @apply bg-gray-200 placeholder:text-black rounded-md border-none
     }
-    .center{
-        @apply flex h-screen justify-center items-center; 
+    .modal-active{
+        @apply opacity-100 flex justify-center items-center flex-col ;
+    }
+}
+@layer base {
+    .active {
+        @apply bg-blue-500 active:scale-95 transition-all duration-500;
+    }
+    a{
+        @apply w-full py-2 px-3 font-extrabold flex items-center justify-end;
+    }
+    a > *{
+    @apply mx-2 transition-all duration-[2000];
+   }
+   tr>*{
+    @apply py-2;
+   }
+    input{
+        @apply focus:outline-none p-1 placeholder:text-right
+    }
+    .modal{
+        @apply
+        bg-white fixed w-1/2 h-1/2 flex justify-center items-center
+        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-md 
+    }
+    .main-modal{
+        @apply w-screen h-screen fixed hidden justify-center items-center top-0;
     }
 }
 
-@layer base{
-    body{
-        @apply flex h-screen justify-center items-center;
-    }
-    nav{
-        @apply bg-slate-800 text-white py-5 px-2 uppercase;
-    }
-    input[type='input']{
-        @apply px-2 py-3 my-4 outline-none bg-slate-400 text-black rounded-md shadow-md;
-    }
-    input::placeholder{
-        @apply text-gray-200; 
-    }
-    button{
-        @apply hover:bg-red-700
-    }
-    option,select{
-        @apply py-2 px-1;
-    }
-    
-}
-@layer utilities{
-    .reserve{
+@layer utilities {
+    .reserve {
         @apply bg-gray-400 px-2;
     }
+    .icons{
+        @apply text-2xl bg-blue-900 text-white mx-2 p-1 rounded-full;
+    }
+
 }
